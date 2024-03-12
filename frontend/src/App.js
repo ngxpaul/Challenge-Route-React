@@ -37,11 +37,25 @@ function App() {
         {
           path: "events",
           element: <EventRoot />,
+
           children: [
-            { path: "", element: <EventsPage /> },
+            {
+              path: "",
+              element: <EventsPage />,
+              loader: async () => {
+                const response = await fetch("http://localhost:8080/events");
+
+                if (!response.ok) {
+                  //.....
+                } else {
+                  const resData = await response.json();
+                  return resData.events;
+                }
+              },
+            },
             { path: ":eventID", element: <EventDetailPage /> },
             { path: "new", element: <NewEventPage /> },
-            { path: ":eventID/edit", element: <EditEventPage />}
+            { path: ":eventID/edit", element: <EditEventPage /> },
           ],
         },
       ],
