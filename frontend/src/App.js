@@ -22,7 +22,7 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Root from "./pages/Root.js";
 import HomePage from "./pages/HomePage.js";
-import EventsPage from "./pages/EventsPage.js";
+import EventsPage,{loader as loaderEvent} from "./pages/EventsPage.js";
 import NewEventPage from "./pages/NewEventPage.js";
 import EventDetailPage from "./pages/EventDetailPage.js";
 import EditEventPage from "./pages/EditEventPage.js";
@@ -42,16 +42,7 @@ function App() {
             {
               path: "",
               element: <EventsPage />,
-              loader: async () => {
-                const response = await fetch("http://localhost:8080/events");
-
-                if (!response.ok) {
-                  //.....
-                } else {
-                  const resData = await response.json();
-                  return resData.events;
-                }
-              },
+              loader: loaderEvent
             },
             { path: ":eventID", element: <EventDetailPage /> },
             { path: "new", element: <NewEventPage /> },
