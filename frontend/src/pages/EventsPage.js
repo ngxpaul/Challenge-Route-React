@@ -1,24 +1,37 @@
-import { Link } from "react-router-dom";
+import { useEffect, useState } from 'react';
 
-const DUMMY_EVENTS = [
-    {
-        id: 'e1',
-        title: 'Programming for everyone',
+import EventsList from '../components/EventsList';
+
+function EventsPage() {
+  const [isLoading, setIsLoading] = useState(false);
+  const [fetchedEvents, setFetchedEvents] = useState();
+  const [error, setError] = useState();
+
+  useEffect(() => {
+    async function fetchEvents() {
+      setIsLoading(true);
+      const response = await fetch('http://localhost:8080/events');
+
+      if (!response.ok) {
+        setError('Fetching events failed.');
+      } else {
+        const resData = await response.json();
+        setFetchedEvents(resData.events);
+      }
+      setIsLoading(false);
     }
-,
-    {
-        id: 'e2',
-        title: 'Networking for introverts',
-    }
-]
-function EventsPage(){
-    return(
-        <>
-        <h1>EventsPage</h1>
-        {DUMMY_EVENTS.map(event => <li key={event.id}>
-            <Link to = {event.id}>{event.title}</Link>
-        </li>)}
-        </>
-    )
+
+    fetchEvents();
+  }, []);
+  return (
+    <>
+      <div style={{ textAlign: 'center' }}>
+        {isLoading && <p>Loading...</p>}
+        {error && <p>{error}</p>}
+      </div>
+      {!isLoading && fetchedEvents && <EventsList events={fetchedEvents} />}
+    </>
+  );
 }
+
 export default EventsPage;
