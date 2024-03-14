@@ -24,7 +24,9 @@ import Root from "./pages/Root.js";
 import HomePage from "./pages/HomePage.js";
 import EventsPage, { loader as loaderEvent } from "./pages/EventsPage.js";
 import NewEventPage from "./pages/NewEventPage.js";
-import EventDetailPage from "./pages/EventDetailPage.js";
+import EventDetailPage, {
+  loader as eventEventLoader,
+} from "./pages/EventDetailPage.js";
 import EditEventPage from "./pages/EditEventPage.js";
 import EventRoot from "./pages/EventRoot.js";
 import ErrorPage from "./pages/Error.js";
@@ -33,7 +35,7 @@ function App() {
     {
       path: "/",
       element: <Root />,
-      errorElement: <ErrorPage/>,
+      errorElement: <ErrorPage />,
       children: [
         { index: true, element: <HomePage /> },
         {
@@ -46,7 +48,11 @@ function App() {
               element: <EventsPage />,
               loader: loaderEvent,
             },
-            { path: ":eventID", element: <EventDetailPage /> },
+            {
+              path: ":eventID",
+              element: <EventDetailPage />
+              ,loader: eventEventLoader,
+            },
             { path: "new", element: <NewEventPage /> },
             { path: ":eventID/edit", element: <EditEventPage /> },
           ],
