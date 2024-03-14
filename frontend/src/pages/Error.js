@@ -1,9 +1,7 @@
+import PageContent from "../components/PageContent";
 function ErrorPage(){
     return (
-        <div>
-            <h1>404</h1>
-            <p>Page not found</p>
-        </div>
+       <PageContent></PageContent>
     )
 }
 export default ErrorPage;
