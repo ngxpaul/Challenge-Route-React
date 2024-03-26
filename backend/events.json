@@ -1,11 +1,1 @@
-{
-  "events": [
-    {
-      "id": "e1",
-      "title": "A dummy event",
-      "date": "2023-02-22",
-      "image": "https://blog.hubspot.de/hubfs/Germany/Blog_images/Optimize_Marketing%20Events%20DACH%202021.jpg",
-      "description": "Join this amazing event and connect with fellow developers."
-    }
-  ]
-}
+{"events":[{"title":"aaaaaaa","image":"https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.getyourguide.com%2Fen-au%2Fdubai-l173%2Fdubai-img-worlds-of-adventure-free-hotel-transfers-t490920%2F&psig=AOvVaw3mn_iT4sv6d9D-8DLKY6-d&ust=1711530819336000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCIiMgqbLkYUDFQAAAAAdAAAAABAJ","date":"2024-03-16","description":"aadwadawd","id":"27332147-884c-404a-acca-2c22dd7a4d31"},{"title":"aaaaaaaaaaaaaa","image":"https://www.google.com/url?sa=i&url=https%3A%2F%2Fplatinumlist.net%2Fguide%2Feverything-you-need-to-know-about-img-worlds-of-adventure%2F&psig=AOvVaw3mn_iT4sv6d9D-8DLKY6-d&ust=1711530819336000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCIiMgqbLkYUDFQAAAAAdAAAAABAE","date":"2024-03-07","description":"ww","id":"dd3b32e9-9af3-484d-bc4e-ef13bc11b55b"},{"title":"Testing","image":"https://source.unsplash.com/user/c_v_r/1900x800 ","date":"1222-02-21","description":"I'm testing this Web","id":"bfab4648-37f3-4bbf-a293-823edbc9ef9d"},{"id":"e1","title":"A dummy event","date":"2023-02-22","image":"https://blog.hubspot.de/hubfs/Germany/Blog_images/Optimize_Marketing%20Events%20DACH%202021.jpg","description":"Join this amazing event and connect with fellow developers."}]}
