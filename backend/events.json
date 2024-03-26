@@ -1,1 +1,11 @@
-{"events":[{"title":"Dog","image":"https://picsum.photos/id/237/200/300","date":"2024-03-13","description":"Cute Dog","id":"173ac172-d929-49bb-b540-380add9ccdd9"},{"title":"New Event","image":"https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.imgacademy.com%2F&psig=AOvVaw38adsjvK67bcg2QN34EoNP&ust=1711532395536000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCNjnuZXRkYUDFQAAAAAdAAAAABAE","date":"2024-03-09","description":"New Amizing","id":"a5855bbd-a14c-48da-9936-2aa803e5db97"},{"title":"aaa","image":"https://www.google.com/url?sa=i&url=https%3A%2F%2Fplatinumlist.net%2Fguide%2Feverything-you-need-to-know-about-img-worlds-of-adventure%2F&psig=AOvVaw3mn_iT4sv6d9D-8DLKY6-d&ust=1711530819336000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCIiMgqbLkYUDFQAAAAAdAAAAABAE","date":"2024-03-19","description":"aaaa","id":"a64f60e6-53c3-4852-822f-54534db08b37"},{"id":"e1","title":"A dummy event","date":"2023-02-22","image":"https://blog.hubspot.de/hubfs/Germany/Blog_images/Optimize_Marketing%20Events%20DACH%202021.jpg","description":"Join this amazing event and connect with fellow developers."}]}
+{
+  "events": [
+    {
+      "id": "e1",
+      "title": "A dummy event",
+      "date": "2023-02-22",
+      "image": "https://blog.hubspot.de/hubfs/Germany/Blog_images/Optimize_Marketing%20Events%20DACH%202021.jpg",
+      "description": "Join this amazing event and connect with fellow developers."
+    }
+  ]
+}

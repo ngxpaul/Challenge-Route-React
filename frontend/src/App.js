@@ -23,9 +23,12 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Root from "./pages/Root.js";
 import HomePage from "./pages/HomePage.js";
 import EventsPage, { loader as loaderEvent } from "./pages/EventsPage.js";
-import NewEventPage,{action as newEventAction} from "./pages/NewEventPage.js";
+import NewEventPage, {
+  action as newEventAction,
+} from "./pages/NewEventPage.js";
 import EventDetailPage, {
   loader as eventEventLoader,
+  action as deleteEventAction,
 } from "./pages/EventDetailPage.js";
 import EditEventPage from "./pages/EditEventPage.js";
 import EventRoot from "./pages/EventRoot.js";
@@ -56,12 +59,13 @@ function App() {
                 {
                   index: true,
                   element: <EventDetailPage />,
+                  action: deleteEventAction,
                 },
                 { path: "edit", element: <EditEventPage /> },
               ],
             },
 
-            { path: "new", element: <NewEventPage  />, action: newEventAction },
+            { path: "new", element: <NewEventPage />, action: newEventAction },
           ],
         },
       ],
