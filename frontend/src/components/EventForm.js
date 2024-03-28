@@ -6,7 +6,7 @@ function EventForm({ method, event }) {
   const navigate = useNavigate();
   const navigation = useNavigation();
 
-  const isSubmitting = navigate.state === "submitting";
+  const isSubmitting = navigation.state === "submitting";
 
   function cancelHandler() {
     navigate("..");
